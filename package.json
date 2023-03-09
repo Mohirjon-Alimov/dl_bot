@@ -9,8 +9,10 @@
     "tunnel": "vk-tunnel --insecure=1 --port=3000 --timeout=60000"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "telebot": "^1.4.1",
-    "telebot-vercel": "0.0.10"
+    "telebot-vercel": "0.0.10",
+    "tiktok-video-downloader": "^1.0.2"
   },
   "peerDependencies": {
     "vercel": "latest",
