@@ -27,6 +27,5 @@ bot.on("text", async (msg) => {
     bot.sendMessage(msg.from.id, `your url: ${url}`)
 });
 
-bot.start()
 
 export default bot
