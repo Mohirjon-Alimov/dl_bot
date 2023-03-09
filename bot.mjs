@@ -30,6 +30,7 @@ bot.on("text", async (msg) => {
     }
     const url = msg.text;
     if (url.startsWith("https://vt.tiktok.com/")) {
+        bot.sendMessage(msg.from.id, 'Soon')
         try {
           ttdl.getInfo(url).then(async (result) => {
             await bot.sendVideo("-1001859543798", result.video.url.no_wm, {
