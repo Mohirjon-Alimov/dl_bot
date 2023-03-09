@@ -1,0 +1,27 @@
+{
+  "name": "telebot-vercel-template",
+  "author": "Vladislav Ponomarev <PonomareVlad@users.noreply.github.com> (https://PonomareVlad.ru)",
+  "funding": "https://PonomareVlad.ru/donate",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vc dev",
+    "dev-with-tunnel": "npm run tunnel & npm run dev",
+    "tunnel": "vk-tunnel --insecure=1 --port=3000 --timeout=60000"
+  },
+  "dependencies": {
+    "telebot": "^1.4.1",
+    "telebot-vercel": "0.0.10"
+  },
+  "peerDependencies": {
+    "vercel": "latest",
+    "@vkontakte/vk-tunnel": "latest"
+  },
+  "peerDependenciesMeta": {
+    "vercel": {
+      "optional": true
+    },
+    "@vkontakte/vk-tunnel": {
+      "optional": true
+    }
+  }
+}
