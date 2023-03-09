@@ -11,20 +11,22 @@ bot.on("/start", (msg) => {
 });
 
 bot.on("text", async (msg) => {
-    
+
     if (
-      msg?.chat?.id == "-1001859543798" ||
-      msg?.sender_chat?.type == "channel"
+        msg?.chat?.id == "-1001859543798" ||
+        msg?.sender_chat?.type == "channel"
     ) {
-      return;
+        return;
     }
     if (msg?.entities[0]?.type != "url") {
         bot.sendMessage(msg.from.id, `This is not url`)
 
-      return;
+        return;
     }
-        const url = msg.text;
-        bot.sendMessage(msg.from.id, `your url: ${url}`)
-  });
+    const url = msg.text;
+    bot.sendMessage(msg.from.id, `your url: ${url}`)
+});
+
+bot.start()
 
 export default bot
