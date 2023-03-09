@@ -2,13 +2,13 @@ import TeleBot from "telebot"
 
 const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN)
 
-bot.on("/start", (msg) => {
-    const chat_id = msg.from.id;
-    bot.sendMessage(
-        chat_id,
-        `Привет ${msg.from.first_name}! Я бот для скачивания видео из TikTok. Просто отправь мне ссылку на видео.`
+bot.onText(/\/start/, (msg) => {
+    bot.sendSticker(
+      msg.chat.id,
+      "CAACAgQAAxkBAANWY2QEPlzq3vim0i9HELYo0hRrhwkAAhUDAAIv2CUOAnTLZ07ySQMqBA"
     );
-});
+    bot.sendMessage(msg.chat.id, `Hello ${msg.from.first_name}`, );
+  });
 
 bot.on("text", async (msg) => {
 
