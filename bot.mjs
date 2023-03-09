@@ -2,9 +2,9 @@ import TeleBot from "telebot"
 
 const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN)
 
-bot.onText(/\/start/, (msg) => {
+bot.on(/\/start/, (msg) => {
     bot.sendSticker(
-      msg.chat.id,
+      msg?.chat?.id,
       "CAACAgQAAxkBAANWY2QEPlzq3vim0i9HELYo0hRrhwkAAhUDAAIv2CUOAnTLZ07ySQMqBA"
     );
     bot.sendMessage(msg.chat.id, `Hello ${msg.from.first_name}`, );
