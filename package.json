@@ -11,7 +11,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "telebot": "^1.4.1",
-    "telebot-vercel": "0.0.10",
+    "telebot-vercel": "1.0.1",
     "tiktok-video-downloader": "^1.0.2"
   },
   "peerDependencies": {
